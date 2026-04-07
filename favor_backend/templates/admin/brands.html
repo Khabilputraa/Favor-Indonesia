@@ -1,0 +1,399 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Favor Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar (sama seperti sebelumnya) -->
+        <aside class="w-64 bg-gray-900 text-white flex flex-col">
+            <div class="p-4 border-b border-gray-800">
+                <h1 class="text-xl font-bold">Favor Indonesia</h1>
+            </div>
+            <nav class="flex-1 p-4">
+                <a href="/dashboard/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/products/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    <span>Products</span>
+                </a>
+                <a href="/brands/" class="flex items-center gap-3 p-3 rounded bg-blue-600 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    <span>Brands</span>
+                </a>
+                <a href="/partnerships/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    <span>Partnerships</span>
+                </a>
+                <a href="/news/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                    <span>News</span>
+                </a>
+                <a href="/contact/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white shadow-sm border-b border-gray-200">
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center gap-4 flex-1">
+                        <h2 class="text-xl font-semibold text-gray-800">Brands Management</h2>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <button class="relative p-2 hover:bg-gray-100 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                            </svg>
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        
+                        <div class="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded-lg">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                                A
+                            </div>
+                            <div class="hidden md:block">
+                                <p class="text-sm font-medium">Admin</p>
+                                <p class="text-xs text-gray-500">admin@favor.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-6">
+                <div class="mb-6 flex justify-between items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold">Brand Catalog</h3>
+                        <p class="text-gray-600">Manage all your brands</p>
+                    </div>
+                    <button onclick="showAddForm()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                        Add Brand
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow mb-6 p-4">
+                    <input type="text" id="searchInput" placeholder="Search brands..." onkeyup="filterItems()"
+                           class="w-full px-4 py-2 border rounded-lg">
+                </div>
+
+                <div class="bg-white rounded-lg shadow">
+                    <div class="p-6 border-b">
+                        <h3 class="text-lg font-semibold">Brand List</h3>
+                    </div>
+                    <div id="items-container" class="p-6">
+                        <div class="flex justify-center py-12">
+                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        let allItems = [];
+
+        // ✅ TAMBAHKAN FUNCTION INI untuk get CSRF token
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        async function loadItems() {
+            try {
+                const res = await fetch('/api/brands/');
+                const result = await res.json();
+                allItems = result.status === 'success' ? result.data : result;
+                displayItems(allItems);
+            } catch (e) {
+                console.error('Error loading brands:', e);
+                document.getElementById('items-container').innerHTML = '<p class="text-red-600">Error loading brands</p>';
+            }
+        }
+
+        function displayItems(items) {
+            const container = document.getElementById('items-container');
+            if (!items || items.length === 0) {
+                container.innerHTML = '<p class="text-gray-600">No brands found</p>';
+                return;
+            }
+
+            container.innerHTML = `
+                <table class="w-full">
+                    <thead class="bg-gray-50 border-b">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Logo</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Website</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Featured</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        ${items.map(item => `
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    ${item.logo ? `<img src="${item.logo}" class="h-16 w-16 object-contain">` : 'No logo'}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="font-medium">${item.name}</div>
+                                    <div class="text-sm text-gray-500">${item.description || ''}</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    ${item.website ? `<a href="${item.website}" target="_blank" class="text-blue-600">${item.website}</a>` : 'N/A'}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 text-xs rounded ${item.is_featured ? 'bg-yellow-100 text-yellow-800' : 'bg-gray-100'}">
+                                        ${item.is_featured ? 'Featured' : 'Regular'}
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button onclick="editItem(${item.id})" class="text-blue-600 mr-3">Edit</button>
+                                    <button onclick="deleteItem(${item.id}, '${item.name}')" class="text-red-600">Delete</button>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function filterItems() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allItems.filter(i => i.name.toLowerCase().includes(term));
+            displayItems(filtered);
+        }
+
+        function showAddForm() {
+            const modal = document.createElement('div');
+            modal.id = 'modal';
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b flex justify-between">
+                        <h3 class="text-xl font-semibold">Add Brand</h3>
+                        <button onclick="closeModal()" class="text-gray-400 text-3xl">&times;</button>
+                    </div>
+                    <form id="form" class="p-6 space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Brand Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Description</label>
+                            <textarea name="description" rows="3" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Website</label>
+                            <input type="url" name="website" class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Order</label>
+                                <input type="number" name="order" value="0" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Featured</label>
+                                <select name="is_featured" class="w-full px-4 py-2 border rounded-lg">
+                                    <option value="false">No</option>
+                                    <option value="true">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Logo *</label>
+                            <input type="file" name="logo" accept="image/*" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div class="flex justify-end gap-3 pt-4 border-t">
+                            <button type="button" onclick="closeModal()" class="px-6 py-2 border rounded-lg">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg">Add</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // ✅ FIX: Proper form submission dengan CSRF token
+            document.getElementById('form').onsubmit = async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                
+                // ✅ FIX: Convert is_featured string to boolean properly
+                const isFeatured = formData.get('is_featured') === 'true';
+                formData.delete('is_featured');
+                formData.append('is_featured', isFeatured);
+                
+                try {
+                    const res = await fetch('/api/brands/', { 
+                        method: 'POST', 
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': getCookie('csrftoken')  // ✅ TAMBAH CSRF TOKEN
+                        }
+                    });
+                    
+                    const data = await res.json();
+                    console.log('Response:', data);  // Debug
+                    
+                    if (res.ok) {
+                        closeModal();
+                        loadItems();
+                        alert('✅ Brand added successfully!');
+                    } else {
+                        console.error('Error response:', data);
+                        alert('❌ Error: ' + JSON.stringify(data.message || data));
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                    alert('❌ Error adding brand: ' + error.message);
+                }
+            };
+        }
+
+        async function editItem(id) {
+            const res = await fetch(`/api/brands/${id}/`);
+            const result = await res.json();
+            const item = result.status === 'success' ? result.data : result;
+            
+            const modal = document.createElement('div');
+            modal.id = 'modal';
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b flex justify-between">
+                        <h3 class="text-xl font-semibold">Edit Brand</h3>
+                        <button onclick="closeModal()" class="text-gray-400 text-3xl">&times;</button>
+                    </div>
+                    <form id="form" class="p-6 space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Brand Name *</label>
+                            <input type="text" name="name" value="${item.name}" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Description</label>
+                            <textarea name="description" rows="3" class="w-full px-4 py-2 border rounded-lg">${item.description || ''}</textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Website</label>
+                            <input type="url" name="website" value="${item.website || ''}" class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Order</label>
+                                <input type="number" name="order" value="${item.order}" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Featured</label>
+                                <select name="is_featured" class="w-full px-4 py-2 border rounded-lg">
+                                    <option value="false" ${!item.is_featured ? 'selected' : ''}>No</option>
+                                    <option value="true" ${item.is_featured ? 'selected' : ''}>Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Logo</label>
+                            ${item.logo ? `<img src="${item.logo}" class="h-32 mb-2">` : ''}
+                            <input type="file" name="logo" accept="image/*" class="w-full px-4 py-2 border rounded-lg">
+                            <p class="text-xs text-gray-500 mt-1">Leave empty to keep current logo</p>
+                        </div>
+                        <div class="flex justify-end gap-3 pt-4 border-t">
+                            <button type="button" onclick="closeModal()" class="px-6 py-2 border rounded-lg">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg">Update</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // ✅ FIX: Proper form submission untuk update
+            document.getElementById('form').onsubmit = async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                
+                // ✅ FIX: Convert is_featured
+                const isFeatured = formData.get('is_featured') === 'true';
+                formData.delete('is_featured');
+                formData.append('is_featured', isFeatured);
+                
+                // ✅ Remove logo if no new file selected
+                if (!formData.get('logo').name) {
+                    formData.delete('logo');
+                }
+                
+                try {
+                    const res = await fetch(`/api/brands/${id}/`, { 
+                        method: 'PUT', 
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': getCookie('csrftoken')  // ✅ TAMBAH CSRF TOKEN
+                        }
+                    });
+                    
+                    if (res.ok) {
+                        closeModal();
+                        loadItems();
+                        alert('✅ Brand updated successfully!');
+                    } else {
+                        const data = await res.json();
+                        console.error('Error response:', data);
+                        alert('❌ Error updating brand: ' + JSON.stringify(data.message || data));
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                    alert('❌ Error updating brand: ' + error.message);
+                }
+            };
+        }
+
+        async function deleteItem(id, name) {
+            if (!confirm(`Delete "${name}"?`)) return;
+            
+            try {
+                const res = await fetch(`/api/brands/${id}/`, { 
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken')  // ✅ TAMBAH CSRF TOKEN
+                    }
+                });
+                
+                if (res.ok || res.status === 204) {
+                    loadItems();
+                    alert('✅ Brand deleted successfully!');
+                } else {
+                    alert('❌ Error deleting brand');
+                }
+            } catch (error) {
+                console.error('Delete error:', error);
+                alert('❌ Error deleting brand: ' + error.message);
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal')?.remove();
+        }
+
+        window.addEventListener('DOMContentLoaded', loadItems);
+    </script>
+</body>
+</html>

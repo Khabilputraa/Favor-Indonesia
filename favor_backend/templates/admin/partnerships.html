@@ -1,0 +1,674 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships - Favor Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 text-white flex flex-col">
+            <div class="p-4 border-b border-gray-800">
+                <h1 class="text-xl font-bold">Favor Indonesia</h1>
+            </div>
+            <nav class="flex-1 p-4">
+                <a href="/dashboard/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/products/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                    <span>Products</span>
+                </a>
+                <a href="/brands/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
+                    <span>Brands</span>
+                </a>
+                <a href="/partnerships/" class="flex items-center gap-3 p-3 rounded bg-blue-600 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span>Partnerships</span>
+                </a>
+                <a href="/news/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                    <span>News</span>
+                </a>
+                <a href="/contact/" class="flex items-center gap-3 p-3 rounded hover:bg-gray-800 text-white mb-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main -->
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white shadow p-4 flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Partnerships Management</h2>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">A</div>
+                    <span class="text-sm">Admin</span>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Tabs -->
+                <div class="mb-6 border-b">
+                    <button onclick="switchTab('partners')" id="tab-partners"
+                        class="px-6 py-3 border-b-2 border-blue-600 font-semibold text-blue-600">
+                        Partners
+                    </button>
+                    <button onclick="switchTab('inquiries')" id="tab-inquiries"
+                        class="px-6 py-3 border-b-2 border-transparent font-semibold text-gray-600 hover:text-blue-600">
+                        Inquiries
+                    </button>
+                </div>
+
+                <!-- Partners Section -->
+                <div id="section-partners">
+                    <div class="mb-6 flex justify-between items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold">Partnership Catalog</h3>
+                            <p class="text-gray-600">Manage all your partners</p>
+                        </div>
+                        <button onclick="showAddPartnerForm()"
+                            class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                            Add Partner
+                        </button>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow mb-6 p-4">
+                        <input type="text" id="searchPartners" placeholder="Search partners..."
+                            onkeyup="filterPartners()"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold">Partner List</h3>
+                        </div>
+                        <div id="partners-container" class="p-6">
+                            <div class="flex justify-center py-12">
+                                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiries Section -->
+                <div id="section-inquiries" class="hidden">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold">Partnership Inquiries</h3>
+                        <p class="text-gray-600">Manage partnership requests</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow mb-6 p-4">
+                        <input type="text" id="searchInquiries" placeholder="Search inquiries..."
+                            onkeyup="filterInquiries()"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold">Inquiry List</h3>
+                        </div>
+                        <div id="inquiries-container" class="p-6">
+                            <div class="flex justify-center py-12">
+                                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        let allPartners = [];
+        let allInquiries = [];
+
+        // ✅ Get CSRF Token
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function switchTab(tab) {
+            if (tab === 'partners') {
+                document.getElementById('section-partners').classList.remove('hidden');
+                document.getElementById('section-inquiries').classList.add('hidden');
+                document.getElementById('tab-partners').className = 'px-6 py-3 border-b-2 border-blue-600 font-semibold text-blue-600';
+                document.getElementById('tab-inquiries').className = 'px-6 py-3 border-b-2 border-transparent font-semibold text-gray-600';
+            } else {
+                document.getElementById('section-partners').classList.add('hidden');
+                document.getElementById('section-inquiries').classList.remove('hidden');
+                document.getElementById('tab-partners').className = 'px-6 py-3 border-b-2 border-transparent font-semibold text-gray-600';
+                document.getElementById('tab-inquiries').className = 'px-6 py-3 border-b-2 border-blue-600 font-semibold text-blue-600';
+                if (allInquiries.length === 0) loadInquiries();
+            }
+        }
+
+        async function loadPartners() {
+            try {
+                const res = await fetch('/api/partnerships/');
+                if (!res.ok) throw new Error('Failed to fetch partners');
+                const result = await res.json();
+                allPartners = result.status === 'success' ? result.data : result;
+                displayPartners(allPartners);
+            } catch (e) {
+                document.getElementById('partners-container').innerHTML = `
+                <div class="text-center py-12">
+                    <p class="text-red-600 font-medium">Error loading partners</p>
+                    <button onclick="loadPartners()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg">Retry</button>
+                </div>
+            `;
+            }
+        }
+
+        function displayPartners(items) {
+            const container = document.getElementById('partners-container');
+            if (!items || items.length === 0) {
+                container.innerHTML = `
+            <div class="text-center py-12">
+                <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+                <p class="text-gray-600 font-medium">No partners found</p>
+                <p class="text-gray-500 text-sm mt-2">Start by adding your first partner</p>
+            </div>
+        `;
+                return;
+            }
+
+            container.innerHTML = `
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-50 border-b">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Logo</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Company</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Website</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    ${items.map(item => `
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                ${item.logo
+                    ? `<img src="${item.logo}" class="h-16 w-16 object-contain rounded">`
+                    : `<div class="h-16 w-16 bg-gray-200 rounded flex items-center justify-center text-gray-400">No Logo</div>`
+                }
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="font-medium text-gray-900">${item.company_name}</div>
+                                <div class="text-sm text-gray-500">${item.description || 'No description'}</div>
+                            </td>
+                            <td class="px-6 py-4">
+                                ${item.website
+                    ? `<a href="${item.website}" target="_blank" class="text-blue-600 hover:underline">${item.website}</a>`
+                    : '<span class="text-gray-400">N/A</span>'
+                }
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${item.is_active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                                    ${item.is_active ? 'Active' : 'Inactive'}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <button data-action="edit" data-id="${item.id}" class="text-blue-600 hover:text-blue-900 mr-4">
+                                    <svg class="w-5 h-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </button>
+                                <button data-action="delete" data-id="${item.id}" data-name="${item.company_name}" class="text-red-600 hover:text-red-900">
+                                    <svg class="w-5 h-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+        <div class="px-6 py-4 border-t text-sm text-gray-600">
+            Showing ${items.length} partner${items.length !== 1 ? 's' : ''}
+        </div>
+    `;
+
+            // ✅ Attach event listeners setelah HTML di-render
+            container.querySelectorAll('button[data-action="edit"]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    editPartner(parseInt(btn.dataset.id));
+                });
+            });
+
+            container.querySelectorAll('button[data-action="delete"]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    deletePartner(parseInt(btn.dataset.id), btn.dataset.name);
+                });
+            });
+        }
+
+        function filterPartners() {
+            const term = document.getElementById('searchPartners').value.toLowerCase();
+            const filtered = allPartners.filter(i =>
+                i.company_name.toLowerCase().includes(term) ||
+                (i.description && i.description.toLowerCase().includes(term))
+            );
+            displayPartners(filtered);
+        }
+
+        function showAddPartnerForm() {
+            const modal = document.createElement('div');
+            modal.id = 'modal';
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+            <div class="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Add Partner</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <form id="form" class="p-6 space-y-4" enctype="multipart/form-data">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Company Name *</label>
+                        <input type="text" name="company_name" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Description</label>
+                        <textarea name="description" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Website</label>
+                        <input type="url" name="website" placeholder="https://example.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Order</label>
+                            <input type="number" name="order" value="0" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Status</label>
+                            <select name="is_active" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="true">Active</option>
+                                <option value="false">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Logo *</label>
+                        <input type="file" name="logo" accept="image/*" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div class="flex justify-end gap-3 pt-4 border-t">
+                        <button type="button" onclick="closeModal()" class="px-6 py-2 border rounded-lg hover:bg-gray-50">Cancel</button>
+                        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                            <span id="submitText">Add Partner</span>
+                            <span id="submitLoading" class="hidden">Adding...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        `;
+            document.body.appendChild(modal);
+
+            document.getElementById('form').onsubmit = async (e) => {
+                e.preventDefault();
+                const btn = e.target.querySelector('button[type="submit"]');
+                const text = document.getElementById('submitText');
+                const loading = document.getElementById('submitLoading');
+
+                btn.disabled = true;
+                text.classList.add('hidden');
+                loading.classList.remove('hidden');
+
+                const formData = new FormData(e.target);
+                formData.set('is_active', formData.get('is_active') === 'true');
+
+                try {
+                    const res = await fetch('/api/partnerships/', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': getCookie('csrftoken')
+                        }
+                    });
+
+                    if (res.ok) {
+                        closeModal();
+                        loadPartners();
+                        alert('✅ Partner added successfully!');
+                    } else {
+                        const error = await res.json();
+                        alert('❌ Error: ' + (error.message || 'Failed to add partner'));
+                    }
+                } catch (error) {
+                    alert('❌ Error: ' + error.message);
+                } finally {
+                    btn.disabled = false;
+                    text.classList.remove('hidden');
+                    loading.classList.add('hidden');
+                }
+            };
+        }
+
+        async function editPartner(id) {
+            try {
+                const res = await fetch(`/api/partnerships/${id}/`);
+                if (!res.ok) throw new Error('Failed to fetch partner');
+
+                const result = await res.json();
+                const item = result.status === 'success' ? result.data : result;
+
+                const modal = document.createElement('div');
+                modal.id = 'modal';
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                modal.innerHTML = `
+            <div class="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b flex justify-between items-center">
+                    <h3 class="text-xl font-semibold">Edit Partner</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <form id="editForm" class="p-6 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Company Name *</label>
+                        <input type="text" name="company_name" value="${item.company_name}" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Description</label>
+                        <textarea name="description" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">${item.description || ''}</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Website</label>
+                        <input type="url" name="website" value="${item.website || ''}" placeholder="https://example.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Order</label>
+                            <input type="number" name="order" value="${item.order || 0}" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Status</label>
+                            <select name="is_active" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="true" ${item.is_active ? 'selected' : ''}>Active</option>
+                                <option value="false" ${!item.is_active ? 'selected' : ''}>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Logo</label>
+                        ${item.logo ? `
+                            <div class="mb-4">
+                                <p class="text-sm text-gray-600 mb-2">Current logo:</p>
+                                <img src="${item.logo}" class="h-32 rounded border">
+                            </div>
+                        ` : ''}
+                        <input type="file" name="logo" accept="image/*" id="editLogoInput" class="w-full px-4 py-2 border rounded-lg">
+                        <p class="text-xs text-gray-500 mt-1">Leave empty to keep current logo</p>
+                    </div>
+                    <div class="flex justify-end gap-3 pt-4 border-t">
+                        <button type="button" onclick="closeModal()" class="px-6 py-2 border rounded-lg hover:bg-gray-50">Cancel</button>
+                        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                            <span id="updateText">Update Partner</span>
+                            <span id="updateLoading" class="hidden">Updating...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        `;
+                document.body.appendChild(modal);
+
+                document.getElementById('editForm').onsubmit = async (e) => {
+                    e.preventDefault();
+                    const btn = e.target.querySelector('button[type="submit"]');
+                    const text = document.getElementById('updateText');
+                    const loading = document.getElementById('updateLoading');
+
+                    btn.disabled = true;
+                    text.classList.add('hidden');
+                    loading.classList.remove('hidden');
+
+                    // ✅ Cek apakah ada file logo baru
+                    const logoInput = document.getElementById('editLogoInput');
+                    const hasNewLogo = logoInput.files && logoInput.files.length > 0;
+
+                    let requestBody;
+                    let headers = {
+                        'X-CSRFToken': getCookie('csrftoken')
+                    };
+
+                    if (hasNewLogo) {
+                        // ✅ Ada logo baru - kirim sebagai FormData
+                        const formData = new FormData();
+                        formData.append('company_name', e.target.company_name.value);
+                        formData.append('description', e.target.description.value);
+                        formData.append('website', e.target.website.value);
+                        formData.append('order', e.target.order.value);
+                        formData.append('is_active', e.target.is_active.value === 'true');
+                        formData.append('logo', logoInput.files[0]);
+
+                        requestBody = formData;
+                    } else {
+                        // ✅ Tidak ada logo baru - kirim sebagai JSON (tanpa field logo)
+                        headers['Content-Type'] = 'application/json';
+                        requestBody = JSON.stringify({
+                            company_name: e.target.company_name.value,
+                            description: e.target.description.value,
+                            website: e.target.website.value,
+                            order: parseInt(e.target.order.value),
+                            is_active: e.target.is_active.value === 'true'
+                        });
+                    }
+
+                    try {
+                        const res = await fetch(`/api/partnerships/${id}/`, {
+                            method: 'PUT',
+                            headers: headers,
+                            body: requestBody
+                        });
+
+                        if (res.ok) {
+                            closeModal();
+                            loadPartners();
+                            alert('✅ Partner updated successfully!');
+                        } else {
+                            const error = await res.json();
+                            console.error('Update error:', error);
+                            alert('❌ Error: ' + JSON.stringify(error));
+                        }
+                    } catch (error) {
+                        console.error('Request error:', error);
+                        alert('❌ Error: ' + error.message);
+                    } finally {
+                        btn.disabled = false;
+                        text.classList.remove('hidden');
+                        loading.classList.add('hidden');
+                    }
+                };
+            } catch (error) {
+                console.error('Load partner error:', error);
+                alert('❌ Error loading partner: ' + error.message);
+            }
+        }
+
+
+        async function deletePartner(id, name) {
+            if (!confirm(`Are you sure you want to delete "${name}"?`)) return;
+
+            try {
+                const res = await fetch(`/api/partnerships/${id}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+
+                if (res.ok || res.status === 204) {
+                    loadPartners();
+                    alert('✅ Partner deleted successfully!');
+                } else {
+                    const error = await res.json();
+                    alert('❌ Error: ' + (error.message || 'Failed to delete partner'));
+                }
+            } catch (error) {
+                alert('❌ Error: ' + error.message);
+            }
+        }
+        // Inquiries
+        async function loadInquiries() {
+            try {
+                const res = await fetch('/api/partnerships/inquiries/');
+                const result = await res.json();
+                allInquiries = result.status === 'success' ? result.data : result;
+                displayInquiries(allInquiries);
+            } catch (e) {
+                document.getElementById('inquiries-container').innerHTML = '<p class="text-red-600">Error loading inquiries</p>';
+            }
+        }
+
+        function displayInquiries(items) {
+            const container = document.getElementById('inquiries-container');
+            if (!items || items.length === 0) {
+                container.innerHTML = '<p class="text-gray-600">No inquiries found</p>';
+                return;
+            }
+
+            const statusColors = {
+                'new': 'bg-blue-100 text-blue-800',
+                'contacted': 'bg-yellow-100 text-yellow-800',
+                'in_progress': 'bg-purple-100 text-purple-800',
+                'completed': 'bg-green-100 text-green-800',
+                'rejected': 'bg-red-100 text-red-800'
+            };
+
+            container.innerHTML = `
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50 border-b">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Company</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Contact</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Phone</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        ${items.map(item => `
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">${item.company_name}</td>
+                                <td class="px-6 py-4">${item.contact_person}</td>
+                                <td class="px-6 py-4">${item.email}</td>
+                                <td class="px-6 py-4">${item.phone}</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 text-xs rounded ${statusColors[item.status] || 'bg-gray-100'}">
+                                        ${item.status}
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button onclick="viewInquiry(${item.id})" class="text-blue-600 mr-3 hover:text-blue-900">View</button>
+                                    <button onclick="deleteInquiry(${item.id})" class="text-red-600 hover:text-red-900">Delete</button>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+        }
+
+        function filterInquiries() {
+            const term = document.getElementById('searchInquiries').value.toLowerCase();
+            const filtered = allInquiries.filter(i =>
+                i.company_name.toLowerCase().includes(term) ||
+                i.contact_person.toLowerCase().includes(term)
+            );
+            displayInquiries(filtered);
+        }
+
+        async function viewInquiry(id) {
+            const res = await fetch(`/api/partnerships/inquiries/${id}/`);
+            const result = await res.json();
+            const item = result.status === 'success' ? result.data : result;
+
+            // ✅ Bisa ganti dengan modal yang lebih bagus nanti
+            alert(`Company: ${item.company_name}\nContact: ${item.contact_person}\nEmail: ${item.email}\nPhone: ${item.phone}\nMessage: ${item.message}\nStatus: ${item.status}`);
+        }
+
+        async function deleteInquiry(id) {
+            if (!confirm('Are you sure you want to delete this inquiry?')) return;
+
+            try {
+                const res = await fetch(`/api/partnerships/inquiries/${id}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+
+                if (res.ok || res.status === 204) {
+                    loadInquiries();
+                    alert('✅ Inquiry deleted successfully!');
+                } else {
+                    const error = await res.json();
+                    alert('❌ Error: ' + (error.message || 'Failed to delete inquiry'));
+                }
+            } catch (error) {
+                alert('❌ Error: ' + error.message);
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal')?.remove();
+        }
+
+        window.addEventListener('DOMContentLoaded', loadPartners);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore B2B Solutions with Favor Indonesia - Franchise opportunities, corporate catering, and supplier collaborations. Partner with us for mutual growth.">
+    <meta name="keywords"
+        content="B2B Food Indonesia, Franchise Jogja, Corporate Catering Solutions, Supplier Partnership, Favor Indonesia Collaboration">
+    <meta name="author" content="Favor Indonesia">
+    <link rel="canonical" href="https://favorindonesia.com/b2b.html">
+
+    <title>B2B Solutions | Favor Indonesia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #FFFFFF;
+            --accent-dim: rgba(255, 255, 255, 0.55);
+            --accent-faint: rgba(255, 255, 255, 0.08);
+
+            --dark-bg: #0A0A0A;
+            --dark-card: #111111;
+            --dark-border: rgba(255, 255, 255, 0.10);
+            --dark-text: #F0F0F0;
+            --dark-muted: rgba(240, 240, 240, 0.40);
+
+            --light-bg: #F2F2F2;
+            --light-card: #FFFFFF;
+            --light-border: rgba(0, 0, 0, 0.10);
+            --light-text: #111111;
+            --light-muted: #666666;
+
+            --mid-gray: #888888;
+            --dark-gray: #333333;
+            --border-gray: rgba(255, 255, 255, 0.12);
+
+            --font-display: 'Playfair Display', serif;
+            --font-industrial: 'Bebas Neue', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.35;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-industrial);
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-label::after {
+            content: '';
+            width: 50px;
+            height: 1px;
+            flex-shrink: 0;
+        }
+
+        .dark-section .section-label {
+            color: #AAAAAA;
+        }
+
+        .dark-section .section-label::after {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .light-section .section-label {
+            color: #555555;
+        }
+
+        .light-section .section-label::after {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: .1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: .2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: .3s;
+        }
+
+        .b2b-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(150deg, #0A0A0A 0%, #111111 55%, #080808 100%);
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            animation: gridPan 22s linear infinite;
+        }
+
+        @keyframes gridPan {
+            to {
+                background-position: 80px 80px;
+            }
+        }
+
+        .hero-bg-word {
+            position: absolute;
+            bottom: -3%;
+            left: -1%;
+            font-family: var(--font-industrial);
+            font-size: clamp(9rem, 22vw, 20rem);
+            color: rgba(255, 255, 255, 0.025);
+            letter-spacing: -.05em;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            animation: fadeUp .8s ease-out both;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #FFFFFF;
+            flex-shrink: 0;
+        }
+
+        .hero-eyebrow span {
+            font-family: var(--font-industrial);
+            font-size: .9rem;
+            letter-spacing: 5px;
+            color: #CCCCCC !important;
+        }
+
+        .hero-title {
+            font-family: var(--font-industrial);
+            font-size: clamp(4rem, 8vw, 8rem);
+            letter-spacing: .02em;
+            line-height: .9;
+            color: var(--dark-text);
+            animation: fadeUp .8s .15s ease-out both;
+        }
+
+        .hero-title em {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: #FFFFFF !important;
+            display: block;
+            font-size: .62em;
+            letter-spacing: -.01em;
+        }
+
+        .hero-sub {
+            max-width: 420px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.8;
+            margin-top: 2rem;
+            animation: fadeUp .8s .3s ease-out both;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            margin-top: 2.5rem;
+            padding: .9rem 2rem;
+            font-family: var(--font-industrial);
+            font-size: .85rem;
+            letter-spacing: 3px;
+            color: #0A0A0A;
+            background: #FFFFFF;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: color .3s;
+            animation: fadeUp .8s .45s ease-out both;
+        }
+
+        .hero-cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #555555;
+            transform: translateX(-101%);
+            transition: transform .4s ease;
+        }
+
+        .hero-cta span,
+        .hero-cta svg {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-cta:hover {
+            color: #fff;
+        }
+
+        .hero-cta:hover::after {
+            transform: translateX(0);
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            animation: fadeUp .8s .2s ease-out both;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 3px solid rgba(255, 255, 255, 0.08);
+            padding: 1.75rem 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all .4s ease;
+            cursor: default;
+        }
+
+        .hero-card:nth-child(1) {
+            animation: fadeUp .8s .25s ease-out both;
+        }
+
+        .hero-card:nth-child(2) {
+            animation: fadeUp .8s .38s ease-out both;
+        }
+
+        .hero-card:nth-child(3) {
+            animation: fadeUp .8s .51s ease-out both;
+        }
+
+        .hero-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-left-color: #FFFFFF;
+            transform: translateX(8px);
+        }
+
+        .hc-icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: border-color .4s, background .4s;
+        }
+
+        .hero-card:hover .hc-icon {
+            border-color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hc-icon svg {
+            color: #CCCCCC;
+        }
+
+        .hc-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: .3rem;
+        }
+
+        .hc-desc {
+            font-size: .82rem;
+            color: var(--dark-muted);
+            line-height: 1.5;
+        }
+
+        .hc-arrow {
+            color: rgba(255, 255, 255, 0.2);
+            transition: color .3s, transform .3s;
+            flex-shrink: 0;
+        }
+
+        .hero-card:hover .hc-arrow {
+            color: #FFFFFF;
+            transform: translateX(4px);
+        }
+
+        .hero-divider {
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            left: 50%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12), transparent);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+            animation: fadeUp .8s .6s ease-out both;
+        }
+
+        .hero-scroll span {
+            font-family: var(--font-industrial);
+            font-size: .65rem;
+            letter-spacing: 4px;
+            color: #888888;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, #888888, transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: .3;
+                transform: scaleY(.6);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-divider {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+
+        .ticker-bar {
+            background: #222222;
+            overflow: hidden;
+            padding: 1.1rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .ticker-track {
+            display: flex;
+            gap: 3rem;
+            animation: ticker 28s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-industrial);
+            font-size: 1rem;
+            letter-spacing: 3px;
+            color: #AAAAAA;
+            flex-shrink: 0;
+        }
+
+        .t-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #555555;
+            flex-shrink: 0;
+        }
+
+        @keyframes ticker {
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .brand-section {
+            background: var(--light-bg);
+            padding: 120px 0;
+        }
+
+        .brand-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--light-text);
+            margin-bottom: .5rem;
+            line-height: 1.1;
+        }
+
+        .brand-section h2 span {
+            color: #333333;
+        }
+
+        .brand-section .sub-head {
+            font-size: 1.05rem;
+            color: var(--light-muted);
+            margin-bottom: 4rem;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2px;
+            background: rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .brand-tile {
+            background: var(--light-card);
+            padding: 2.5rem 2rem;
+            position: relative;
+            cursor: pointer;
+            transition: background .35s ease;
+            overflow: hidden;
+        }
+
+        .brand-tile::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #333333, #000000);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s ease;
+        }
+
+        .brand-tile:hover::before,
+        .brand-tile.active::before {
+            transform: scaleX(1);
+        }
+
+        .brand-tile:hover,
+        .brand-tile.active {
+            background: #F7F7F7;
+        }
+
+        .tile-num {
+            font-family: var(--font-industrial);
+            font-size: .7rem;
+            letter-spacing: 4px;
+            color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.25rem;
+        }
+
+        .tile-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .tile-desc {
+            font-size: .875rem;
+            color: var(--light-muted);
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s cubic-bezier(.4, 0, .2, 1), opacity .3s ease;
+            opacity: 0;
+        }
+
+        .brand-tile.active .tile-desc,
+        .brand-tile:hover .tile-desc {
+            max-height: 150px;
+            opacity: 1;
+        }
+
+        .tile-arrow {
+            position: absolute;
+            top: 2rem;
+            right: 1.5rem;
+            color: rgba(0, 0, 0, 0.2);
+            transition: color .3s, transform .3s;
+        }
+
+        .brand-tile:hover .tile-arrow,
+        .brand-tile.active .tile-arrow {
+            color: #111111;
+            transform: rotate(90deg);
+        }
+
+        .stats-strip {
+            background: var(--light-bg);
+            padding: 80px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-cell {
+            padding: 3rem 2rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            transition: background .35s;
+        }
+
+        .stat-cell:last-child {
+            border-right: none;
+        }
+
+        .stat-cell:hover {
+            background: #fff;
+        }
+
+        .stat-cell::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #333333, #000000);
+            transition: width .5s ease;
+        }
+
+        .stat-cell:hover::before {
+            width: 100%;
+        }
+
+        .stat-num {
+            font-family: var(--font-industrial);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: var(--light-text);
+            line-height: 1;
+            letter-spacing: .02em;
+        }
+
+        .stat-num span {
+            color: #333333;
+        }
+
+        .stat-label {
+            font-size: .875rem;
+            color: var(--light-muted);
+            margin-top: .5rem;
+            line-height: 1.5;
+        }
+
+        .form-section {
+            background: var(--dark-bg);
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 6rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .form-left h2 {
+            font-family: var(--font-industrial);
+            font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+            color: var(--dark-text);
+            line-height: .95;
+            letter-spacing: .02em;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-left h2 span {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: #AAAAAA;
+            display: block;
+            font-size: .52em;
+            letter-spacing: 0;
+        }
+
+        .form-left>p {
+            font-size: .95rem;
+            color: var(--dark-muted);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .contact-strip {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--dark-card);
+            transition: background .3s;
+        }
+
+        .contact-row:hover {
+            background: #1A1A1A;
+        }
+
+        .contact-row svg {
+            color: #AAAAAA;
+            flex-shrink: 0;
+        }
+
+        .contact-row h4 {
+            font-family: var(--font-industrial);
+            font-size: .65rem;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.3);
+            margin-bottom: .3rem;
+        }
+
+        .contact-row a {
+            font-size: .9rem;
+            color: #CCCCCC;
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        .contact-row a:hover {
+            color: #FFFFFF;
+        }
+
+        .ind-form {
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+        }
+
+        .ind-form .fg {
+            margin-bottom: 1.5rem;
+        }
+
+        .ind-form .fg-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ind-form label {
+            display: block;
+            font-family: var(--font-industrial);
+            font-size: .65rem;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: .65rem;
+        }
+
+        .ind-form input,
+        .ind-form select,
+        .ind-form textarea {
+            width: 100%;
+            padding: .9rem 1.1rem;
+            font-family: var(--font-body);
+            font-size: .9rem;
+            color: var(--dark-text);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 0;
+            transition: all .3s;
+        }
+
+        .ind-form input::placeholder,
+        .ind-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        .ind-form input:focus,
+        .ind-form select:focus,
+        .ind-form textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+        }
+
+        .ind-form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23AAAAAA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.1rem center;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding-right: 2.5rem;
+        }
+
+        .ind-form select option {
+            background: #111111;
+        }
+
+        .ind-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            font-family: var(--font-industrial);
+            font-size: .95rem;
+            letter-spacing: 4px;
+            color: #0A0A0A;
+            background: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all .4s;
+        }
+
+        .submit-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #555555;
+            transform: translateX(-101%);
+            transition: transform .4s ease;
+        }
+
+        .submit-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .submit-btn:hover {
+            color: #fff;
+        }
+
+        .submit-btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .mini-stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.08);
+            margin-top: .25rem;
+        }
+
+        .mini-stat-cell {
+            background: #111111;
+            padding: 1.25rem 1rem;
+            text-align: center;
+        }
+
+        .mini-stat-num {
+            font-family: var(--font-industrial);
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            line-height: 1;
+        }
+
+        .mini-stat-label {
+            font-size: .7rem;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: .3rem;
+            letter-spacing: 1px;
+        }
+
+        #main-footer {
+            background: #080808 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        @media (max-width: 1100px) {
+            .brands-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+
+            .brands-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .ind-form {
+                padding: 2rem;
+            }
+
+            .ind-form .fg-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brands-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-cell {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-circle-bg"></div>
+            <div class="loader-circle"></div>
+            <img src="assets/loading.png" alt="Favor Indonesia" class="loader-logo">
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 sticky-top" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="assets/img/logo.png" alt="Favor Indonesia" style="height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="brands.html" class="nav-item nav-link">Brands</a>
+                    <a href="catalog.html" class="nav-item nav-link">Catalog</a>
+                    <a href="news.html" class="nav-item nav-link">News &amp; Events</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Collaboration</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="b2b.html" class="dropdown-item active">B2B Solutions</a>
+                            <a href="partnership.html" class="dropdown-item">Partnership</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="b2b-hero dark-section">
+        <div class="hero-grid"></div>
+        <div class="hero-bg-word">B2B</div>
+        <div class="hero-divider"></div>
+
+        <div class="hero-inner container">
+
+            <div class="hero-left">
+                <div class="hero-eyebrow">
+                    <span>BUSINESS TO BUSINESS</span>
+                </div>
+                <h1 class="hero-title">
+                    GROW<br>WITH
+                    <em>Favor.</em>
+                </h1>
+                <p class="hero-sub">Franchise, Corporate Catering, and Supplier Collaboration — built for long-term
+                    business growth.</p>
+            </div>
+
+            <div class="hero-right">
+
+                <div class="hero-card">
+                    <div class="hc-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <div class="hc-body">
+                        <div class="hc-title">Franchise Opportunities</div>
+                        <p class="hc-desc">Own and operate a Favor brand with proven systems and full HQ support.</p>
+                    </div>
+                    <svg class="hc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hc-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <div class="hc-body">
+                        <div class="hc-title">Corporate Catering</div>
+                        <p class="hc-desc">Professional catering for 50 to 5,000+ guests — offices, events,
+                            institutions.</p>
+                    </div>
+                    <svg class="hc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hc-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <div class="hc-body">
+                        <div class="hc-title">Supplier Collaboration</div>
+                        <p class="hc-desc">Long-term sourcing partnerships for ingredients, packaging, and logistics.
+                        </p>
+                    </div>
+                    <svg class="hc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+
+                <!-- mini stat row -->
+                <div class="mini-stat-row">
+                    <div class="mini-stat-cell">
+                        <div class="mini-stat-num">5</div>
+                        <div class="mini-stat-label">BRANDS</div>
+                    </div>
+                    <div class="mini-stat-cell">
+                        <div class="mini-stat-num">360°</div>
+                        <div class="mini-stat-label">SUPPORT</div>
+                    </div>
+                    <div class="mini-stat-cell">
+                        <div class="mini-stat-num">2–3</div>
+                        <div class="mini-stat-label">DAYS REPLY</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <div class="ticker-bar">
+        <div class="ticker-track">
+            <div class="ticker-item">
+                <div class="t-dot"></div>FRANCHISE OPPORTUNITIES
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>CORPORATE CATERING
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>SUPPLIER COLLABORATION
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>5 BRANDS
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>PROVEN SYSTEMS
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>YOGYAKARTA &amp; BEYOND
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>FRANCHISE OPPORTUNITIES
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>CORPORATE CATERING
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>SUPPLIER COLLABORATION
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>5 BRANDS
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>PROVEN SYSTEMS
+            </div>
+            <div class="ticker-item">
+                <div class="t-dot"></div>YOGYAKARTA &amp; BEYOND
+            </div>
+        </div>
+    </div>
+
+    <section class="brand-section light-section">
+        <div class="container">
+            <div class="section-label reveal">OUR BRANDS</div>
+            <h2 class="reveal">Our Brand <span>Ecosystem</span></h2>
+            <p class="sub-head reveal">Five distinctive brands. Multiple B2B opportunities.</p>
+
+            <div class="brands-grid reveal">
+
+                <div class="brand-tile" data-brand="heritage">
+                    <div class="tile-num">01</div>
+                    <div class="tile-name">Favor Heritage</div>
+                    <p class="tile-desc">Premium dining experience with refined culinary excellence. Our flagship brand
+                        delivering exceptional gastronomic journeys.</p>
+                    <svg class="tile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+
+                <div class="brand-tile" data-brand="patisserie">
+                    <div class="tile-num">02</div>
+                    <div class="tile-name">Favor Patisserie</div>
+                    <p class="tile-desc">Artisan pastries and desserts crafted with passion. European-inspired
+                        techniques meet Indonesian flavors.</p>
+                    <svg class="tile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+
+                <div class="brand-tile" data-brand="express">
+                    <div class="tile-num">03</div>
+                    <div class="tile-name">Favor Express</div>
+                    <p class="tile-desc">Fast-casual concept designed for high volume and quick service without
+                        compromising quality.</p>
+                    <svg class="tile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+
+                <div class="brand-tile" data-brand="catering">
+                    <div class="tile-num">04</div>
+                    <div class="tile-name">Favor Catering</div>
+                    <p class="tile-desc">Professional catering solutions for corporate events, weddings, and large-scale
+                        functions.</p>
+                    <svg class="tile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+
+                <div class="brand-tile" data-brand="tujie">
+                    <div class="tile-num">05</div>
+                    <div class="tile-name">Tujie Coffee</div>
+                    <p class="tile-desc">Modern lifestyle coffee brand serving specialty beverages in contemporary
+                        spaces.</p>
+                    <svg class="tile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section dark-section">
+        <div class="form-grid">
+            <div class="form-left reveal">
+                <div class="section-label">GET IN TOUCH</div>
+                <h2>
+                    <span>Ready to Partner?</span>
+                    START HERE
+                </h2>
+                <p>Fill out the form and our business development team will respond within 2–3 business days to discuss
+                    your B2B opportunity.</p>
+
+                <div class="contact-strip">
+                    <div class="contact-row">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <div>
+                            <h4>EMAIL</h4>
+                            <a href="mailto:business@favorindonesia.com">business@favorindonesia.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <div>
+                            <h4>PHONE</h4>
+                            <a href="tel:+6282227023839">+62 822-2702-3839</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal reveal-delay-2">
+                <form id="b2bForm" class="ind-form">
+                    <div class="fg-row">
+                        <div class="fg">
+                            <label>FULL NAME *</label>
+                            <input type="text" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="fg">
+                            <label>PHONE *</label>
+                            <input type="tel" name="phone" required placeholder="+62 812...">
+                        </div>
+                    </div>
+
+                    <div class="fg">
+                        <label>EMAIL ADDRESS *</label>
+                        <input type="email" name="email" required placeholder="john@company.com">
+                    </div>
+
+                    <div class="fg-row">
+                        <div class="fg">
+                            <label>COMPANY TYPE *</label>
+                            <select name="companyType" required>
+                                <option value="">Select type</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="investor">Investor</option>
+                                <option value="supplier">Supplier</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="fg">
+                            <label>B2B INTEREST *</label>
+                            <select name="interest" required>
+                                <option value="">Select interest</option>
+                                <option value="franchise">Franchise</option>
+                                <option value="catering">Corporate Catering</option>
+                                <option value="supplier">Supplier Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fg">
+                        <label>YOUR MESSAGE *</label>
+                        <textarea name="message" rows="5" required
+                            placeholder="Share details about your business and partnership interest..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>SUBMIT INQUIRY →</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" id="main-footer" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="">Reservation</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms &amp; Condition</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Yogyakarta, Indonesia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 822-2702-3839</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>business@favorindonesia.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                    <p>09AM - 09PM</p>
+                    <h5 class="text-light fw-normal">Sunday</h5>
+                    <p>10AM - 08PM</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
+                    <p>Stay updated with our latest B2B opportunities and brand news.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+        new WOW().init();
+
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            if (loader) setTimeout(() => loader.classList.add('hidden'), 800);
+        });
+
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    revealObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        // Brand tiles — click to toggle
+        document.querySelectorAll('.brand-tile').forEach(tile => {
+            tile.addEventListener('click', () => {
+                const active = tile.classList.contains('active');
+                document.querySelectorAll('.brand-tile').forEach(t => t.classList.remove('active'));
+                if (!active) tile.classList.add('active');
+            });
+        });
+
+        // Form submit
+        const form = document.getElementById('b2bForm');
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('.submit-btn span');
+                btn.textContent = '✓ INQUIRY RECEIVED';
+                form.querySelectorAll('input,select,textarea').forEach(el => el.disabled = true);
+                setTimeout(() => {
+                    btn.textContent = 'SUBMIT INQUIRY →';
+                    form.reset();
+                    form.querySelectorAll('input,select,textarea').forEach(el => el.disabled = false);
+                }, 4000);
+            });
+        }
+
+        $(window).on('load resize', function () {
+            if (this.matchMedia('(min-width: 992px)').matches) {
+                $('.dropdown').hover(
+                    function () { $(this).addClass('show').find('.dropdown-toggle').attr('aria-expanded', 'true').end().find('.dropdown-menu').addClass('show'); },
+                    function () { $(this).removeClass('show').find('.dropdown-toggle').attr('aria-expanded', 'false').end().find('.dropdown-menu').removeClass('show'); }
+                );
+            } else { $('.dropdown').off('mouseenter mouseleave'); }
+        });
+    </script>
+</body>
+
+</html>
